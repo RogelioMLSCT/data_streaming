@@ -52,9 +52,39 @@ def insert_data(session, **kwargs):
     gender = kwargs.get("gender")
     address = kwargs.get("address")
     postcode = kwargs.get("postcode")
-    coordinate = kwargs.get("coordinate")
-    id = kwargs.get("id")
-    id = kwargs.get("id")
+    coordinate = kwargs.get("coordinates")
+    email = kwargs.get("email")
+    username = kwargs.get("username")
+    dob = kwargs.get("dob")
+    registered_date = kwargs.get("registered_date")
+    phone = kwargs.get("phone")
+    picture = kwargs.get("picture")
+
+    try:
+        session.execute(
+            """
+            INSERT INTO spark_streams.created_users (id, first_name, last_name, gender, adress, postcode, coordinates, email, username, dob, registered_date, phone, picture)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            """,
+            (
+                id,
+                first_name,
+                last_name,
+                gender,
+                address,
+                postcode,
+                coordinate,
+                email,
+                username,
+                dob,
+                registered_date,
+                phone,
+                picture,
+            ),
+        )
+        print("Data inserted successfully!")
+    except Exception as e:
+        logging.error(f"Error inserting data: {e}")
 
 
 def create_spark_connection():
@@ -64,12 +94,20 @@ def create_spark_connection():
     try:
         s_conn = (
             SparkSession.builder.appName("SparkDataStreaming")
+            # JAR local del conector Cassandra
+            .config(
+                "spark.jars",
+                "/home/rfranco/spark-jars/spark-cassandra-connector-assembly_2.13-3.5.0.jar",
+            )
+            # Solo Kafka va via spark.jars.packages
             .config(
                 "spark.jars.packages",
-                "com.datasax.spark:spark-cassandra-connector_2.13:3.5.1,"
                 "org.apache.spark:spark-sql-kafka-0-10_2.13:3.5.5",
             )
+            # Configuración de Cassandra
             .config("spark.cassandra.connection.host", "localhost")
+            .config("spark.cassandra.auth.username", "cassandra")
+            .config("spark.cassandra.auth.password", "cassandra")
             .getOrCreate()
         )
 

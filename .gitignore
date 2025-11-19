@@ -1,6 +1,10 @@
+# virtual enviroment data
 bin
 include
 lib
 lib64
 share
 pyvenv.cfg
+
+# test random files
+test.py

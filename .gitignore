@@ -8,3 +8,7 @@ pyvenv.cfg
 
 # test random files
 test.py
+
+# dags cache
+__pycache__/
+*.pyc

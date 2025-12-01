@@ -1,8 +1,8 @@
 from datetime import datetime
 from airflow import DAG
-from airflow.operators.python import PythonOperator
+from airflow.operators import PythonOperator
 
-deff_arg = {"owner": "RF", "start_date": datetime(2025, 3, 24, 00)}
+deff_arg = {"owner": "RF", "start_date": datetime(2025, 11, 30, 00)}
 
 
 def get_data():

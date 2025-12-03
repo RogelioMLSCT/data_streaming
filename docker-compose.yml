@@ -375,3 +375,4 @@ volumes:
 
 networks:
   bigdata:
+    driver: bridge

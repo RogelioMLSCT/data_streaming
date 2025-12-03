@@ -2,3 +2,7 @@ pyarrow
 py4j
 pyspark
 apache-airflow
+spark
+kafka-python
+apache-airflow-providers-apache-kafka
+confluent-kafka

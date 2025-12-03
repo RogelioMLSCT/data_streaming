@@ -399,3 +399,5 @@
 {"timestamp":"2025-12-03T06:52:15.571145Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/kafka-streaming.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
 {"timestamp":"2025-12-03T06:52:46.240690Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/kafka-streaming.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
 {"timestamp":"2025-12-03T06:53:16.774923Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/kafka-streaming.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-03T06:53:46.965474Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/kafka-streaming.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-03T06:54:17.658061Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/kafka-streaming.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}

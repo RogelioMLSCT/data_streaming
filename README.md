@@ -1,18 +1,18 @@
-# Proyecto de Streaming de Datos en Tiempo Real
+# Real-Time Data Streaming Project
+## Description
+This project implements a real-time data streaming pipeline from an external API. It uses Kafka for data ingestion, Airflow for orchestration, Spark for processing, and Cassandra for NoSQL storage.
 
-## Descripción
-Este proyecto implementa un pipeline de streaming de datos en tiempo real desde una API externa. Utiliza Kafka para la ingesta de datos, Airflow para orquestación, Spark para procesamiento y Cassandra para almacenamiento NoSQL.
+The main flow:
+- Collects data from the API in real time.
+- Sends them to Kafka as topics.
+- Airflow schedules and monitors the jobs.
+- Spark processes the data (e.g., aggregations, transformations).
+- Stores results in Cassandra for quick queries.
 
-El flujo principal:
-- Recopila datos de la API en tiempo real.
-- Los envía a Kafka como topics.
-- Airflow programa y monitorea los jobs.
-- Spark procesa los datos (e.g., agregaciones, transformaciones).
-- Almacena resultados en Cassandra para consultas rápidas.
+## Technologies Used
 
-## Tecnologías Usadas
-- **Kafka**: Para mensajería y streaming.
-- **Airflow**: Orquestación de workflows.
-- **Spark**: Procesamiento distribuido de datos.
-- **Cassandra**: Base de datos NoSQL para almacenamiento escalable.
-- Otras: Python (para scripts), Docker (para contenedores, opcional).
+- **Kafka**: For messaging and streaming.
+- **Airflow**: Workflow orchestration.
+- **Spark**: Distributed data processing.
+- **Cassandra**: Scalable NoSQL database.
+Others: Python (for scripts), Docker (for containers, optional).

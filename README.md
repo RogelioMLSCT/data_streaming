@@ -6,7 +6,7 @@ The main flow:
 - Collects data from the API in real time.
 - Sends them to Kafka as topics.
 - Airflow schedules and monitors the jobs.
-- Spark processes the data (e.g., aggregations, transformations).
+- Spark processes the data.
 - Stores results in Cassandra for quick queries.
 
 ## Technologies Used
